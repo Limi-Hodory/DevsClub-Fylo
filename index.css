@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: hsl(229, 57%, 11%);
+    background-image: url('assets/bg-desktop.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: contain;
+}
+#floating-shapes{
+   width: 80%;
+
+}
+#floating-shape1{
+    background-color:hsl(228, 56%, 26%);
+    position: fixed;
+    top: 200px;
+    left: 400px;
+    height: 200px;
+    width: 350px;
+    border-radius: 5px 80px 5px 5px;
+    padding-left: 30px;
+    
+}
+#logo{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    
+}
+
+/* All the 3 icons  */
+.icon{
+    width:40px;
+    height: 40px;
+    margin: 7px; 
+    background-color:hsl(229, 57%, 11%);
+    background-position-y: 50px;
+    padding:10px;
+    padding-top: 20px;
+    border-radius: 10px;
+    
+}
+#floating-shape2{
+    background-color:hsl(228, 56%, 26%);
+    position: fixed;
+    top: 250px;
+    left:800px;
+    height: 150px;
+    width: 500px;
+    border-radius: 10px 10px 10px 10px;
+    
+   
+}
+.status-bar{
+    position: relative;
+}
+ .progress{ /*The blue part of the bar (like the shadow) */
+    margin: 20px;
+    width: 450px;
+    height:20px;
+    background-color:hsl(229, 57%, 11%);
+    border-radius: 10px;
+
+}
+/* The before is contained inside status-bar */
+.progress::before{
+    content: '';
+    display: flex;
+    align-items: center; 
+    position: absolute; /*Because "absolute", before reltive to "status-bar" */
+    left: 1.5em;
+    top: .2em;
+    bottom: .2em;
+    width: 0%;
+    min-width: 18rem;
+    max-width: calc(100% - 18rem);
+    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%)) ;
+    border-radius: 10px;
+}
+.progress::after{
+    content:'';
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: calc(100% - 19em);
+    top: .3em;
+    bottom: .3em;
+    width: 0%;
+    min-width: .7rem;
+    background-color: white;
+    border-radius: 10px;
+}
+.row1{
+    margin-top: 25px;
+    margin-left: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+.row2{
+    display: flex;
+    justify-content: space-between;
+}
+.col-sm{
+    font-family: 'Raleway', sans-serif;
+    font-size: small;
+    color: white;
+    padding-left: 25px;
+    padding-right: 30px;
+}
+#floating-shape3{
+    background-color: white;
+    height: 60px;
+    width: 150px;
+    border-radius: 10px 10px 10px 10px;
+    padding-left: 70px;
+    margin-bottom: 500px;
+    position: fixed;
+    top: 210px;
+    left: 1100px;
+    
+}
+
+.triangle {
+    width: 60px;
+    height: 70px;
+    position:fixed;
+    top: 225px;
+    left: 1191px;
+    background: white;
+    clip-path: polygon(0% 0% ,98% 10%, 100% 100%);
+  }
+.row3{
+   
+    display: flex;
+    text-align: center;
+}
+.col1{
+    color: black;
+    position: fixed;
+    left:1115px;
+    top:220px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+}
+.col2{
+    color: black;
+    position: fixed;
+    left:1180px;
+    top:235px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+}
